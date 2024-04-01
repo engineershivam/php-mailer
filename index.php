@@ -68,17 +68,30 @@ $msg .='</table>';
 $mail = new PHPMailer(true);
 try {
     //Server settings
+
+
+    // $mail->SMTPDebug = false;
+    // $mail->isSMTP();
+    // $mail->Host       = 'aamazingdeal.com';
+    // $mail->SMTPAuth   = true;
+    // $mail->Username   = 'emailtest@aamazingdeal.com';
+    // $mail->Password   = 'Shivam@123';
+    // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    // $mail->Port       = 465;
+
+
     $mail->SMTPDebug = false;
     $mail->isSMTP();
-    $mail->Host       = 'aamazingdeal.com';
+    $mail->Host       = '';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'emailtest@aamazingdeal.com';
-    $mail->Password   = 'Shivam@123';
+    $mail->Username   = '';
+    $mail->Password   = '';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
 
     //Recipients
-    $mail->setFrom('emailtest@aamazingdeal.com', 'New Request');
+    // $mail->setFrom('emailtest@aamazingdeal.com', 'New Request');
+    $mail->setFrom('', 'New Request');
     $mail->addAddress('shivam50091@gmail.com', 'From website');
     //$mail->addCC('cc@example.com');
     $mail->isHTML(true);
